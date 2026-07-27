@@ -1,0 +1,63 @@
+@page "/"
+@rendermode InteractiveWebAssembly
+@using BlazorMonaco
+@using BlazorMonaco.Editor
+
+<PageTitle>.NET Labs - Editor</PageTitle>
+
+<div class="editor-pane">
+    <div class="pane-header">C# Editor</div>
+    <div class="editor-container">
+        <StandaloneCodeEditor @ref="_editor" Id="csharp-editor" ConstructionOptions="EditorConstructionOptions" />
+    </div>
+</div>
+
+<div class="output-pane">
+    <div class="pane-header" style="justify-content: space-between;">
+        <span>Terminal Output</span>
+        <button class="btn btn-primary" @onclick="RunCode">
+            <span>▶</span> Run Code
+        </button>
+    </div>
+    <div class="terminal-output">
+        @if (string.IsNullOrEmpty(_output))
+        {
+            <span style="color: var(--text-secondary)">Click 'Run Code' to execute...</span>
+        }
+        else
+        {
+            @_output
+        }
+    </div>
+</div>
+
+@code {
+    private StandaloneCodeEditor _editor = default!;
+    private string _output = string.Empty;
+
+    private StandaloneEditorConstructionOptions EditorConstructionOptions(StandaloneCodeEditor editor)
+    {
+        return new StandaloneEditorConstructionOptions
+        {
+            AutomaticLayout = true,
+            Language = "csharp",
+            Theme = "vs-dark",
+            Value = "using System;\n\nConsole.WriteLine(\"Hello, .NET Learning Platform!\");",
+            Minimap = new EditorMinimapOptions { Enabled = false },
+            FontSize = 14,
+            Padding = new EditorPaddingOptions { Top = 16 }
+        };
+    }
+
+    private async Task RunCode()
+    {
+        var code = await _editor.GetValue();
+        _output = "Sending code to secure execution sandbox...\n";
+        StateHasChanged();
+        
+        // MOCK: This will be replaced by the actual API call to our backend.
+        await Task.Delay(1000);
+        
+        _output += "\n[Execution Complete]\nOutput:\nHello, .NET Learning Platform!\n";
+    }
+}

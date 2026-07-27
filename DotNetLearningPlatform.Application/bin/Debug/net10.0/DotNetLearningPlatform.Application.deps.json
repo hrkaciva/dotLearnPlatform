@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "DotNetLearningPlatform.Application/1.0.0": {
+        "dependencies": {
+          "DotNetLearningPlatform.Domain": "1.0.0"
+        },
+        "runtime": {
+          "DotNetLearningPlatform.Application.dll": {}
+        }
+      },
+      "DotNetLearningPlatform.Domain/1.0.0": {
+        "runtime": {
+          "DotNetLearningPlatform.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DotNetLearningPlatform.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DotNetLearningPlatform.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

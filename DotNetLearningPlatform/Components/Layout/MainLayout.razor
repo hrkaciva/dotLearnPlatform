@@ -1,0 +1,20 @@
+@inherits LayoutComponentBase
+
+<div class="app-container">
+    <header class="app-header">
+        <div class="brand-logo">.NET Labs</div>
+        <div class="action-bar">
+            <!-- Global actions like Auth will go here later -->
+        </div>
+    </header>
+
+    <main class="workspace">
+        @Body
+    </main>
+</div>
+
+<div id="blazor-error-ui" data-nosnippet>
+    An unhandled error has occurred.
+    <a href="." class="reload">Reload</a>
+    <span class="dismiss">🗙</span>
+</div>
