@@ -1,13 +1,16 @@
 C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearningPlatform.Application\bin\Debug\net10.0\DotNetLearningPlatform.Application.deps.json
 C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearningPlatform.Application\bin\Debug\net10.0\DotNetLearningPlatform.Application.dll
 C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearningPlatform.Application\bin\Debug\net10.0\DotNetLearningPlatform.Application.pdb
+C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearningPlatform.Application\bin\Debug\net10.0\DotNetLearningPlatform.Core.dll
 C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearningPlatform.Application\bin\Debug\net10.0\DotNetLearningPlatform.Domain.dll
 C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearningPlatform.Application\bin\Debug\net10.0\DotNetLearningPlatform.Domain.pdb
+C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearningPlatform.Application\bin\Debug\net10.0\DotNetLearningPlatform.Core.pdb
 C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearningPlatform.Application\obj\Debug\net10.0\DotNetLearningPlatform.Application.csproj.AssemblyReference.cache
 C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearningPlatform.Application\obj\Debug\net10.0\DotNetLearningPlatform.Application.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearningPlatform.Application\obj\Debug\net10.0\DotNetLearningPlatform.Application.AssemblyInfoInputs.cache
 C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearningPlatform.Application\obj\Debug\net10.0\DotNetLearningPlatform.Application.AssemblyInfo.cs
 C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearningPlatform.Application\obj\Debug\net10.0\DotNetLearningPlatform.Application.csproj.CoreCompileInputs.cache
+C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearningPlatform.Application\obj\Debug\net10.0\DotNetLearningPlatform.Application.sourcelink.json
 C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearningPlatform.Application\obj\Debug\net10.0\DotNetLe.2DCE1163.Up2Date
 C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearningPlatform.Application\obj\Debug\net10.0\DotNetLearningPlatform.Application.dll
 C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearningPlatform.Application\obj\Debug\net10.0\refint\DotNetLearningPlatform.Application.dll

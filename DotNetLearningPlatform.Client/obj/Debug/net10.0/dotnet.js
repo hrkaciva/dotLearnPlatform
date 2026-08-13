@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "DotNetLearningPlatform.Client",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-1FUpkoXASOX8je0KtWo15Cq+HZWq+CnkPMpLlBvAMhg=",
+    "hash": "sha256-wKoo1Cn4c3j5EcSKhq43KWYfTk/6mDwymfivHKAdgL8=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.xanz2e7ksm.js"
@@ -56,6 +56,16 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
         "virtualPath": "BlazorMonaco.wasm",
         "name": "BlazorMonaco.49jr5xdp2s.wasm",
         "integrity": "sha256-yAwz/zW+JyPdpSD3J0Nn/uk6efxr4ztcbQovXbqulKM="
+      },
+      {
+        "virtualPath": "MediatR.wasm",
+        "name": "MediatR.1liti21g7h.wasm",
+        "integrity": "sha256-q1Ka35yEhhGAn7exyNIK2Cz3KwC5fukIe45b2OOAmJU="
+      },
+      {
+        "virtualPath": "MediatR.Contracts.wasm",
+        "name": "MediatR.Contracts.f5sa8x1lz4.wasm",
+        "integrity": "sha256-/db+nahzjeSd5EhxUqFrpFzJ998Up6Vgs1PHrV3jqkU="
       },
       {
         "virtualPath": "Microsoft.AspNetCore.Authorization.wasm",
@@ -181,6 +191,26 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
         "virtualPath": "Microsoft.Extensions.Validation.wasm",
         "name": "Microsoft.Extensions.Validation.vibclmvzbq.wasm",
         "integrity": "sha256-qT2aydmmggG8gBaHWUzvrKumK7J9YbGwyd9zdEVWZcA="
+      },
+      {
+        "virtualPath": "Microsoft.IdentityModel.Abstractions.wasm",
+        "name": "Microsoft.IdentityModel.Abstractions.fm59ec96sb.wasm",
+        "integrity": "sha256-txISEwQ8dpwegJsbZu2vGfd8k4q6XeZuHakiiyNPVXs="
+      },
+      {
+        "virtualPath": "Microsoft.IdentityModel.JsonWebTokens.wasm",
+        "name": "Microsoft.IdentityModel.JsonWebTokens.d706uu8nnf.wasm",
+        "integrity": "sha256-d2PIoTv4ZwbiTzakUmMO9SuxLbp7P9ZzL3jUanRzugE="
+      },
+      {
+        "virtualPath": "Microsoft.IdentityModel.Logging.wasm",
+        "name": "Microsoft.IdentityModel.Logging.lzotatrep2.wasm",
+        "integrity": "sha256-wTEJlkLrHT0/u85G5RDA2aoAG6Xx7qwValmTIIAhBlA="
+      },
+      {
+        "virtualPath": "Microsoft.IdentityModel.Tokens.wasm",
+        "name": "Microsoft.IdentityModel.Tokens.zeqz59uvkx.wasm",
+        "integrity": "sha256-hQbBReIl6OvRCOLal9JHAiyQa9Zejqvl/Q03oc0DvyE="
       },
       {
         "virtualPath": "Microsoft.JSInterop.wasm",
@@ -1044,35 +1074,45 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "DotNetLearningPlatform.Application.wasm",
-        "name": "DotNetLearningPlatform.Application.dftk1jxr5o.wasm",
-        "integrity": "sha256-+W6p4AZLh75eN9QjkmBK0xwVxobZ3MLpDN6KWyA3cNU="
+        "name": "DotNetLearningPlatform.Application.a4i61k72rz.wasm",
+        "integrity": "sha256-xv3PmniY9sChnO4/nLxD4V+VcsM+V0MOZdCKnL3VVTA="
+      },
+      {
+        "virtualPath": "DotNetLearningPlatform.Core.wasm",
+        "name": "DotNetLearningPlatform.Core.qvyllwzcea.wasm",
+        "integrity": "sha256-KnchUn2VKPGw5gGUTWpUpbNn9b5fp0UQw9+hSz41MPs="
       },
       {
         "virtualPath": "DotNetLearningPlatform.Domain.wasm",
-        "name": "DotNetLearningPlatform.Domain.7nhesjcz9w.wasm",
-        "integrity": "sha256-LWedor3HmUfK9DND2EkQtW+YiiguzvhTtIFXXAzEZ7I="
+        "name": "DotNetLearningPlatform.Domain.z4nqvqk1qf.wasm",
+        "integrity": "sha256-XWEcAYbPfX+9A81yjLC0itH+naLq3Jgg2SFtFwsbXpY="
       },
       {
         "virtualPath": "DotNetLearningPlatform.Client.wasm",
-        "name": "DotNetLearningPlatform.Client.mmzgldkhjb.wasm",
-        "integrity": "sha256-ot6AW4/qdg6yhP6bYMR7wSQ/K7XrJryeA7rW6zMB5Tk="
+        "name": "DotNetLearningPlatform.Client.hwqeub0cr9.wasm",
+        "integrity": "sha256-sWlKIh1ro/UxbTrOuprCl2O3FxTRXEDd6casboZt20w="
       }
     ],
     "pdb": [
       {
         "virtualPath": "DotNetLearningPlatform.Application.pdb",
-        "name": "DotNetLearningPlatform.Application.pfvgu7kvas.pdb",
-        "integrity": "sha256-26JXmBeTDdnYgs/6Iak+FBXQ5F+Roq96p/oG4bR4oBM="
+        "name": "DotNetLearningPlatform.Application.shd0lqdlas.pdb",
+        "integrity": "sha256-UDEIV9RmYvcniUQIOIbCBiKZbYLjfmyyMitJm0tHPIc="
+      },
+      {
+        "virtualPath": "DotNetLearningPlatform.Core.pdb",
+        "name": "DotNetLearningPlatform.Core.elf1ujjgmb.pdb",
+        "integrity": "sha256-Mj8wrqygR056HmN2e76qBZHxSx76Rzso4My+v4z8+C8="
       },
       {
         "virtualPath": "DotNetLearningPlatform.Domain.pdb",
-        "name": "DotNetLearningPlatform.Domain.8kja22lr5p.pdb",
-        "integrity": "sha256-eOT5/NeE9XylaSlisBPp8EDhdi4btOdI7maQD6jRSgg="
+        "name": "DotNetLearningPlatform.Domain.57ojpinczx.pdb",
+        "integrity": "sha256-QbK6qCCxXVEGbwMVSg5C2cO1dfjd6shBGyL7DvPZuXY="
       },
       {
         "virtualPath": "DotNetLearningPlatform.Client.pdb",
-        "name": "DotNetLearningPlatform.Client.yfocdjxrwi.pdb",
-        "integrity": "sha256-QtCFzAUqaZDLwXZeK3s2vN7YUYZo7gxmD3GiVQH7xxs="
+        "name": "DotNetLearningPlatform.Client.6ato6v5xdz.pdb",
+        "integrity": "sha256-wiOwVR37WRa8S2gq/vovW5JlQS8Mj1sbcx33QnfPa3M="
       }
     ],
     "libraryInitializers": [

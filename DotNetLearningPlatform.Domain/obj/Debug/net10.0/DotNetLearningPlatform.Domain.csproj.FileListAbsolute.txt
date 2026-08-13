@@ -5,6 +5,7 @@ C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearnin
 C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearningPlatform.Domain\obj\Debug\net10.0\DotNetLearningPlatform.Domain.AssemblyInfoInputs.cache
 C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearningPlatform.Domain\obj\Debug\net10.0\DotNetLearningPlatform.Domain.AssemblyInfo.cs
 C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearningPlatform.Domain\obj\Debug\net10.0\DotNetLearningPlatform.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearningPlatform.Domain\obj\Debug\net10.0\DotNetLearningPlatform.Domain.sourcelink.json
 C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearningPlatform.Domain\obj\Debug\net10.0\DotNetLearningPlatform.Domain.dll
 C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearningPlatform.Domain\obj\Debug\net10.0\refint\DotNetLearningPlatform.Domain.dll
 C:\Users\ihrkac\.gemini\antigravity\scratch\DotNetLearningPlatform\DotNetLearningPlatform.Domain\obj\Debug\net10.0\DotNetLearningPlatform.Domain.pdb

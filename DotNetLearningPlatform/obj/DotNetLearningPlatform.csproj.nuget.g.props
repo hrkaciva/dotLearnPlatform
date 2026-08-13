@@ -14,10 +14,12 @@
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)microsoft.dotnet.hotreload.webassembly.browser\10.0.100\buildTransitive\Microsoft.DotNet.HotReload.WebAssembly.Browser.props" Condition="Exists('$(NuGetPackageRoot)microsoft.dotnet.hotreload.webassembly.browser\10.0.100\buildTransitive\Microsoft.DotNet.HotReload.WebAssembly.Browser.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.analyzers\5.3.0\buildTransitive\Microsoft.CodeAnalysis.Analyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.analyzers\5.3.0\buildTransitive\Microsoft.CodeAnalysis.Analyzers.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.app.internal.assets\10.0.0\build\Microsoft.AspNetCore.App.Internal.Assets.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.app.internal.assets\10.0.0\build\Microsoft.AspNetCore.App.Internal.Assets.props')" />
     <Import Project="$(NuGetPackageRoot)blazormonaco\3.5.0\buildTransitive\BlazorMonaco.props" Condition="Exists('$(NuGetPackageRoot)blazormonaco\3.5.0\buildTransitive\BlazorMonaco.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\ihrkac\.nuget\packages\microsoft.codeanalysis.analyzers\5.3.0</PkgMicrosoft_CodeAnalysis_Analyzers>
     <PkgMicrosoft_AspNetCore_Components_WebAssembly_Server Condition=" '$(PkgMicrosoft_AspNetCore_Components_WebAssembly_Server)' == '' ">C:\Users\ihrkac\.nuget\packages\microsoft.aspnetcore.components.webassembly.server\10.0.0</PkgMicrosoft_AspNetCore_Components_WebAssembly_Server>
   </PropertyGroup>
 </Project>

@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "8y6Xr9l8DC8=",
+  "dgSpecHash": "PEr480l+y20=",
   "success": true,
   "projectFilePath": "C:\\Users\\ihrkac\\.gemini\\antigravity\\scratch\\DotNetLearningPlatform\\DotNetLearningPlatform.Infrastructure\\DotNetLearningPlatform.Infrastructure.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ihrkac\\.nuget\\packages\\mediatr\\14.2.0\\mediatr.14.2.0.nupkg.sha512",
+    "C:\\Users\\ihrkac\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\ihrkac\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\5.3.0\\microsoft.codeanalysis.analyzers.5.3.0.nupkg.sha512",
+    "C:\\Users\\ihrkac\\.nuget\\packages\\microsoft.codeanalysis.common\\5.6.0\\microsoft.codeanalysis.common.5.6.0.nupkg.sha512",
+    "C:\\Users\\ihrkac\\.nuget\\packages\\microsoft.codeanalysis.csharp\\5.6.0\\microsoft.codeanalysis.csharp.5.6.0.nupkg.sha512",
+    "C:\\Users\\ihrkac\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.0\\microsoft.extensions.dependencyinjection.abstractions.10.0.0.nupkg.sha512",
+    "C:\\Users\\ihrkac\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\10.0.0\\microsoft.extensions.logging.abstractions.10.0.0.nupkg.sha512",
+    "C:\\Users\\ihrkac\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.14.0\\microsoft.identitymodel.abstractions.8.14.0.nupkg.sha512",
+    "C:\\Users\\ihrkac\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.14.0\\microsoft.identitymodel.jsonwebtokens.8.14.0.nupkg.sha512",
+    "C:\\Users\\ihrkac\\.nuget\\packages\\microsoft.identitymodel.logging\\8.14.0\\microsoft.identitymodel.logging.8.14.0.nupkg.sha512",
+    "C:\\Users\\ihrkac\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.14.0\\microsoft.identitymodel.tokens.8.14.0.nupkg.sha512"
+  ],
   "logs": []
 }
