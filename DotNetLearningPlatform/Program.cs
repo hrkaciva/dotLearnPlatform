@@ -3,6 +3,13 @@ using DotNetLearningPlatform.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var apiBaseUrl = builder.Configuration["ApiBaseUrl"]
+    ?? throw new InvalidOperationException("ApiBaseUrl is not configured.");
+builder.Services.AddScoped(_ => new HttpClient
+{
+    BaseAddress = new Uri(apiBaseUrl)
+});
+
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveWebAssemblyComponents();

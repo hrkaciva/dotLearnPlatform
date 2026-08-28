@@ -1,6 +1,9 @@
 @DotNetLearningPlatform.Api_HostAddress = http://localhost:5041
 
-GET {{DotNetLearningPlatform.Api_HostAddress}}/weatherforecast/
-Accept: application/json
+POST {{DotNetLearningPlatform.Api_HostAddress}}/api/code/execute
+Content-Type: application/json
 
-###
+{
+  "sourceCode": "Console.WriteLine(\"Hello from the API\");",
+  "language": "csharp"
+}

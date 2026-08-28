@@ -7,6 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddCors(options => options.AddPolicy("LocalBlazor", policy =>
+    policy.WithOrigins("http://localhost:5173", "https://localhost:7173")
+        .AllowAnyHeader()
+        .AllowAnyMethod()));
 
 // Configure MediatR
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(ExecuteCodeCommand).Assembly));
@@ -21,6 +25,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseCors("LocalBlazor");
 }
 
 app.UseHttpsRedirection();

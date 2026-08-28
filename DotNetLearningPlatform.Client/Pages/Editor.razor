@@ -2,6 +2,10 @@
 @rendermode InteractiveWebAssembly
 @using BlazorMonaco
 @using BlazorMonaco.Editor
+@using DotNetLearningPlatform.Application
+@using DotNetLearningPlatform.Core
+@implements IDisposable
+@inject HttpClient Http
 
 <PageTitle>.NET Labs - Editor</PageTitle>
 
@@ -15,12 +19,23 @@
 <div class="output-pane">
     <div class="pane-header" style="justify-content: space-between;">
         <span>Terminal Output</span>
-        <button class="btn btn-primary" @onclick="RunCode">
-            <span>▶</span> Run Code
+        <button class="btn btn-primary" @onclick="RunCode" disabled="@_isRunning">
+            @if (_isRunning)
+            {
+                <span>Running...</span>
+            }
+            else
+            {
+                <span><span aria-hidden="true">▶</span> Run Code</span>
+            }
         </button>
     </div>
     <div class="terminal-output">
-        @if (string.IsNullOrEmpty(_output))
+        @if (_isRunning)
+        {
+            <span style="color: var(--text-secondary)">Executing C#...</span>
+        }
+        else if (string.IsNullOrEmpty(_output))
         {
             <span style="color: var(--text-secondary)">Click 'Run Code' to execute...</span>
         }
@@ -34,6 +49,8 @@
 @code {
     private StandaloneCodeEditor _editor = default!;
     private string _output = string.Empty;
+    private bool _isRunning;
+    private CancellationTokenSource? _executionCancellation;
 
     private StandaloneEditorConstructionOptions EditorConstructionOptions(StandaloneCodeEditor editor)
     {
@@ -51,13 +68,58 @@
 
     private async Task RunCode()
     {
-        var code = await _editor.GetValue();
-        _output = "Sending code to secure execution sandbox...\n";
-        StateHasChanged();
-        
-        // MOCK: This will be replaced by the actual API call to our backend.
-        await Task.Delay(1000);
-        
-        _output += "\n[Execution Complete]\nOutput:\nHello, .NET Learning Platform!\n";
+        if (_isRunning)
+        {
+            return;
+        }
+
+        _isRunning = true;
+        _output = string.Empty;
+        _executionCancellation = new CancellationTokenSource();
+
+        try
+        {
+            var code = await _editor.GetValue();
+            using var response = await Http.PostAsJsonAsync(
+                "api/code/execute",
+                new ExecuteCodeCommand { SourceCode = code, Language = "csharp" },
+                _executionCancellation.Token);
+
+            var result = await response.Content.ReadFromJsonAsync<ExecutionResult>(
+                _executionCancellation.Token);
+
+            if (result is not null)
+            {
+                _output = result.IsSuccess ? result.Output : result.Error;
+            }
+            else
+            {
+                _output = $"The API returned an empty response ({(int)response.StatusCode}).";
+            }
+        }
+        catch (OperationCanceledException)
+        {
+            _output = "Execution was cancelled.";
+        }
+        catch (HttpRequestException)
+        {
+            _output = "Unable to reach the code execution API. Make sure the API is running.";
+        }
+        catch (Exception ex)
+        {
+            _output = $"Request failed: {ex.Message}";
+        }
+        finally
+        {
+            _isRunning = false;
+            _executionCancellation?.Dispose();
+            _executionCancellation = null;
+        }
+    }
+
+    public void Dispose()
+    {
+        _executionCancellation?.Cancel();
+        _executionCancellation?.Dispose();
     }
 }

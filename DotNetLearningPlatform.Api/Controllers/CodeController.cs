@@ -16,9 +16,11 @@ public class CodeController : ControllerBase
     }
 
     [HttpPost("execute")]
-    public async Task<IActionResult> ExecuteCode([FromBody] ExecuteCodeCommand command)
+    public async Task<IActionResult> ExecuteCode(
+        [FromBody] ExecuteCodeCommand command,
+        CancellationToken cancellationToken)
     {
-        var result = await _mediator.Send(command);
+        var result = await _mediator.Send(command, cancellationToken);
 
         if (result.IsSuccess)
         {

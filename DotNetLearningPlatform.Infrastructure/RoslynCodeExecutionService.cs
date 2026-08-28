@@ -10,6 +10,12 @@ public class RoslynCodeExecutionService : ICodeExecutionService
 {
     public async Task<ExecutionResult> ExecuteAsync(string sourceCode, CancellationToken cancellationToken)
     {
+        if (cancellationToken.IsCancellationRequested)
+        {
+            return ExecutionResult.Failure(
+                "Execution cancellation was requested. Running code cannot be safely terminated by this executor.");
+        }
+
         return await Task.Run(() =>
         {
             try
@@ -67,6 +73,15 @@ public class RoslynCodeExecutionService : ICodeExecutionService
 
                     task.Wait(cts.Token);
                 }
+                catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
+                {
+                    return ExecutionResult.Failure(
+                        "Execution cancellation was requested. Running code cannot be safely terminated by this executor.");
+                }
+                catch (OperationCanceledException)
+                {
+                    return ExecutionResult.Failure("Execution timed out (3 seconds limit).");
+                }
                 finally
                 {
                     Console.SetOut(originalOut);
@@ -74,13 +89,25 @@ public class RoslynCodeExecutionService : ICodeExecutionService
 
                 return ExecutionResult.Success(stringWriter.ToString());
             }
+            catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
+            {
+                return ExecutionResult.Failure(
+                    "Execution cancellation was requested. Running code cannot be safely terminated by this executor.");
+            }
             catch (OperationCanceledException)
             {
                 return ExecutionResult.Failure("Execution timed out (3 seconds limit).");
             }
             catch (Exception ex)
             {
-                return ExecutionResult.Failure($"Execution failed: {ex.InnerException?.Message ?? ex.Message}");
+                var actualException = ex;
+                while (actualException.InnerException is not null &&
+                       actualException is AggregateException or TargetInvocationException)
+                {
+                    actualException = actualException.InnerException;
+                }
+
+                return ExecutionResult.Failure($"Execution failed: {actualException.Message}");
             }
         }, cancellationToken);
     }

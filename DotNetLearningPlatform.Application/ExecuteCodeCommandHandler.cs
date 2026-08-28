@@ -19,6 +19,11 @@ public class ExecuteCodeCommandHandler : IRequestHandler<ExecuteCodeCommand, Exe
             return ExecutionResult.Failure("Source code cannot be empty.");
         }
 
+        if (!string.Equals(request.Language, "csharp", StringComparison.OrdinalIgnoreCase))
+        {
+            return ExecutionResult.Failure("Only C# (language: csharp) is supported.");
+        }
+
         return await _executionService.ExecuteAsync(request.SourceCode, cancellationToken);
     }
 }
